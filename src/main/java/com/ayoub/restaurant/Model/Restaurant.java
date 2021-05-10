@@ -14,6 +14,7 @@ public class Restaurant {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(name = "name")
     private String name;
     private String location;
     private String phone_number;
@@ -34,6 +35,7 @@ public class Restaurant {
         this.ratings = ratings;
         this.menu = menu;
     }
+
 
     public Restaurant(Long id, String name, String location, String phone_number, Specialty specialty, Ratings ratings, Menu menu) {
         this.id = id;

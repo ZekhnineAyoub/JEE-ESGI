@@ -24,11 +24,11 @@ public class RestaurantService{
 
     public void AddNewRestaurant(Restaurant restaurant){
 
-       /* Boolean existsName = restaurantRepository.SelectExistsName(restaurant.getName());
+        Boolean existsName = restaurantRepository.SelectExistsName(restaurant.getName());
         if(existsName){
             throw new BadRequestException("Name "+restaurant.getName()+ " is taken");
         }
-*/
+
         restaurantRepository.save(restaurant);
     }
 
